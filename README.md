@@ -8,8 +8,18 @@ y compilarla a Latex, PDF o lo que surja con Pandoc.
 Para iniciar un proyecto basado en esta plantilla, haz una copia del repositorio y edita el fichero `main.md`.
 
 ## Generación de PDF con Pandoc
-Una vez instalado Pandoc y alguna distribución de LaTeX, ejecuta el siguiente comando en la raiz del proyecto:
+Instala Pandoc y una distribución de PDF, o bien, si usas Docker y te sitúas en la raiz del proyecto:
 
-```sh
-$ pandoc ...
 ```
+docker build -t pandoc-es .
+```
+
+Si estás en windows:
+
+```
+.\docker-compile-win.cmd
+```
+
+Si estás en linux:
+
+TBD

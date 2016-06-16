@@ -1,4 +1,45 @@
+%%
+% Preámbulo
+%%
 \documentclass[openright,twoside,10pt]{book}
+\usepackage[b5paper,left=2cm,top=2.5cm,right=1.5cm,bottom=2.5cm]{geometry} 
+\usepackage[spanish]{babel} % espanol
+\usepackage[utf8]{inputenc} % acentos sin codigo
+\usepackage{graphicx} % gráficos
+\usepackage{lscape}
+\usepackage{fancyvrb}
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\setlength{\parskip}{10pt plus 1pt minus 1pt}
+ % aqui definimos el encabezado de las paginas pares e impares.
+\rhead[]{}
+
+\renewcommand{\headrulewidth}{0.5pt}
+
+% aqui definimos el pie de pagina de las paginas pares e impares.
+\rfoot[\thepage]{\thepage}
+\cfoot[]{}
+\renewcommand{\footrulewidth}{0pt}
+
+%redefino el verbatim
+%\renewenvironment{verbatim}{\begin{Verbatim}[frame=single,fontsize=\small]}{\end{Verbatim}}
+
+
+% aqui definimos el encabezado y pie de pagina de la pagina inicial de un capitulo.
+\fancypagestyle{plain}{
+\fancyhead[R]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+}
+
+\pagestyle{fancy} % seleccionamos un estilo
+
+
+%%
+% Plantilla
+%%
 
 \date{$fecha$}
 \author{$autor$}
@@ -10,7 +51,7 @@
             \vspace*{-1in}
             \begin{figure}[htb]
                 \begin{center}
-                    \includegraphics[width=3cm]{./img/logo}
+                    \includegraphics[width=3cm]{./latex/img/logo}
                 \end{center}
             \end{figure}
             \begin{large}
@@ -53,21 +94,21 @@
 
     \begin{flushright}
         \textit{%Dedicatoria,\\
-        Pequeña dedicatoria.}
+        $dedicatoria$}
     \end{flushright}
 
     \chapter*{Agradecimientos} % si no queremos que añada la palabra "Capitulo"
     \addcontentsline{toc}{chapter}{Agradecimientos} % si queremos que aparezca en el índice
     \markboth{AGRADECIMIENTOS}{AGRADECIMIENTOS} % encabezado 
 
-    % Aquí agradecer
+    $agradecimientos$
 
     \chapter*{Resumen} % si no queremos que añada la palabra "Capitulo"
     \addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
     \markboth{RESUMEN}{RESUMEN} % encabezado
     \begin{flushleft}
 
-    % Aquí el resumen
+    $resumen$
 
     \end{flushleft}
 
@@ -77,7 +118,7 @@
     \markboth{ABSTRACT}{ABSTRACT} % encabezado
     \begin{flushleft}
 
-    % Aquí va el abstract
+    $abstract$
 
     \end{flushleft}
 
@@ -97,9 +138,9 @@
     \addcontentsline{toc}{chapter}{Bibliografía}
     %\renewcommand\bibname{Referencias Web}
 
-    \begin{thebibliography}{X}
-        \bibitem{ref1} \textit{Ejemplo}, \\
-        \textsc{ejemplo.com}.
-        \\Recuperado a tal fecha, \\de \href{http://ejemplo.com}
-    \end{thebibliography}
+    %\begin{thebibliography}{X}
+    %    \bibitem{ref1} \textit{Ejemplo}, \\
+    %    \textsc{ejemplo.com}.
+    %    \\Recuperado a tal fecha, \\de \href{http://ejemplo.com}
+    %\end{thebibliography}
 \end{document}

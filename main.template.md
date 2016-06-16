@@ -3,32 +3,38 @@ fecha: 16 de mayo de 2016
 autor: Tú
 titulo: Plantilla de TFG
 mencion: INGENIERÍA DE SOFTWARE
+dedicatoria: |
+    Una dedicatoria. Puede
+    alargarse varias líneas, e
+    incluso contener comas.
+agradecimientos: |
+    Bloque de texto que permite alargarse
+    lo que deseemos, incluir comas y cualquier
+    tipo de caracter dentro de este encabezado
+    en YAML siempre y cuando mantengamos
+    la indentación del bloque.
+resumen: |
+    Bloque de texto para el resumen.
+abstract: |
+    Text block for the abstract.
 ---
 
 \chapter{Introducción}\label{cap.introduccion}
-\pagenumbering{arabic} % para empezar la numeración con números
-
+\pagenumbering{arabic}
 <!-- Aquí va la sección de introducción -->
 
 \chapter{Estado del arte}\label{cap.arte}
-\input{./secciones/s1arte.tex}
-
 <!-- Aquí va la sección de estado del arte -->
 
 \chapter{Líneas futuras}\label{cap.futuro}
-\input{./secciones/s4futuro.tex}
-
 <!-- Aquí va la sección de líneas futuras -->
 
 \chapter{Conclusiones}\label{cap.conclusiones}
-\input{./secciones/s5concluyo.tex}
-
 <!-- Aquí va la sección de conclusiones -->
 
 \appendix
 
 \chapter{Manual de usuario}\label{aped.A}
-
 <!-- Aquí va el apéndice de manual de usuario -->
 
 \chapter{Contenidos del CD-ROM}\label{aped.B}
