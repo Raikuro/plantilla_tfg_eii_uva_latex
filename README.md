@@ -12,14 +12,12 @@ Instala Pandoc y una distribución de PDF, o bien, si usas Docker y te sitúas e
 
 ```
 docker build -t pandoc-es .
+docker run -v $PWD:/source pandoc-es
 ```
 
-Si estás en windows:
+Y aparecerá un fichero output.pdf con el resultado.
 
-```
-.\docker-compile-win.cmd
-```
+TODO
+----
 
-Si estás en linux:
-
-TBD
+- [ ] Buscar una buena manera de setear las variables sin tocar la plantilla.

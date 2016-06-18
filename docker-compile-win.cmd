@@ -1,1 +1,0 @@
-docker run -v C:\Users\adria\Sync\plantilla_tfg_eii_uva_latex:/source adrm/pandoc-es -f markdown -t latex main.md --template=./latex/main.tex -o output.pdf

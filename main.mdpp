@@ -21,10 +21,10 @@ abstract: |
 
 \chapter{Introducción}\label{cap.introduccion}
 \pagenumbering{arabic}
-<!-- Aquí va la sección de introducción -->
+!INCLUDE "secciones/introduccion.md"
 
 \chapter{Estado del arte}\label{cap.arte}
-<!-- Aquí va la sección de estado del arte -->
+!INCLUDE "secciones/estado_del_arte.md"
 
 \chapter{Líneas futuras}\label{cap.futuro}
 <!-- Aquí va la sección de líneas futuras -->
