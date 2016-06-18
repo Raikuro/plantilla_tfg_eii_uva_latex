@@ -1,8 +1,8 @@
-FROM haskell:7.10
+FROM haskell
 
 # will ease up the update process
 # updating this env variable will trigger the automatic build of the Docker image
-ENV PANDOC_VERSION "1.16.0.2"
+ENV PANDOC_VERSION "1.17.1"
 
 # install pandoc
 RUN cabal update && cabal install pandoc-${PANDOC_VERSION}
@@ -17,11 +17,14 @@ RUN apt-get update -y \
     texlive-fonts-extra \
     texlive-bibtex-extra \
     texlive-lang-spanish \
-    fontconfig
+    texlive-generic-extra \
+    fontconfig \
+    curl python
 
-RUN apt-get install -y curl python && curl https://bootstrap.pypa.io/get-pip.py > get-pip.py \
+RUN curl https://bootstrap.pypa.io/get-pip.py > get-pip.py \
     && python get-pip.py
 
+RUN cabal update && cabal install pandoc-citeproc
 RUN pip install MarkdownPP
     
 COPY ./compile.sh /
