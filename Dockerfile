@@ -26,6 +26,8 @@ RUN curl https://bootstrap.pypa.io/get-pip.py > get-pip.py \
 
 RUN cabal update && cabal install pandoc-citeproc
 RUN pip install MarkdownPP
+
+RUN apt-get install -y --no-install-recommends biber
     
 COPY ./compile.sh /
 

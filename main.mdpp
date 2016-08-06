@@ -19,23 +19,19 @@ abstract: |
     Text block for the abstract.
 ---
 
-\chapter{Introducción}\label{cap.introduccion}
+<!-- Insertar esta instrucción LaTeX debajo del primer título -->
 \pagenumbering{arabic}
+
 !INCLUDE "secciones/introduccion.md"
 
-\chapter{Estado del arte}\label{cap.arte}
 !INCLUDE "secciones/estado_del_arte.md"
 
-\chapter{Líneas futuras}\label{cap.futuro}
 <!-- Aquí va la sección de líneas futuras -->
 
-\chapter{Conclusiones}\label{cap.conclusiones}
 <!-- Aquí va la sección de conclusiones -->
 
 \appendix
 
-\chapter{Manual de usuario}\label{aped.A}
 <!-- Aquí va el apéndice de manual de usuario -->
 
-\chapter{Contenidos del CD-ROM}\label{aped.B}
 <!-- Aquí va el apéndice de contenidos del CD-ROM -->
