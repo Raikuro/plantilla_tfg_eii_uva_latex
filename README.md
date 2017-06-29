@@ -15,7 +15,7 @@ Instala Pandoc y una distribución de PDF, o bien, si usas Docker y te sitúas e
 docker build -t pandoc .
 
 # Or download it from hub.docker.com
-docker run -v $PWD:/source --rm raikuro/pandoc:1.19.2.1
+docker run -v $PWD:/source --rm raikuro/pandoc:1.19.2.1-dlim
 
 # (NOTE: Autobuild is available at raikuro/pandoc-autobuild)
 ```
