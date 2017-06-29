@@ -1,11 +1,7 @@
 FROM haskell
 
-# will ease up the update process
-# updating this env variable will trigger the automatic build of the Docker image
-ENV PANDOC_VERSION "1.17.1"
-
 # install pandoc
-RUN cabal update && cabal install pandoc-${PANDOC_VERSION}
+RUN cabal update && cabal install pandoc
 
 # install latex packages
 RUN apt-get update -y \
