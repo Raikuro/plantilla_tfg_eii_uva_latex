@@ -11,8 +11,13 @@ Para iniciar un proyecto basado en esta plantilla, haz una copia del repositorio
 Instala Pandoc y una distribución de PDF, o bien, si usas Docker y te sitúas en la raiz del proyecto:
 
 ```
-docker build -t pandoc-es .
-docker run -v $PWD:/source pandoc-es
+# Build the Dockerfile
+docker build -t pandoc .
+
+# Or download it from hub.docker.com
+docker run -v $PWD:/source --rm raikuro/pandoc:1.19.2.1
+
+# (NOTE: Autobuild is available at raikuro/pandoc-autobuild)
 ```
 
 Y aparecerá un fichero output.pdf con el resultado.
