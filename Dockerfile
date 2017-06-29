@@ -1,11 +1,11 @@
 FROM haskell
 
 # install pandoc
-RUN cabal update && cabal install pandoc
-
-# install latex packages
-RUN apt-get update -y \
-  && apt-get install -y --no-install-recommends \
+RUN cabal update &&\
+  cabal install pandoc &&\
+  # install latex packages \
+  apt-get update -y &&\
+  apt-get install -y --no-install-recommends \
     texlive-latex-base \
     texlive-xetex latex-xcolor \
     texlive-math-extra \
@@ -15,16 +15,16 @@ RUN apt-get update -y \
     texlive-lang-spanish \
     texlive-generic-extra \
     fontconfig \
-    curl python
+    curl \
+    python &&\
+  curl https://bootstrap.pypa.io/get-pip.py > get-pip.py &&\
+  python get-pip.py &&\
+  cabal install pandoc-citeproc &&\
+  pip install MarkdownPP &&\
+  apt-get install -y --no-install-recommends biber &&\
+  rm -rf /var/lib/apt/lists/* &&\
+  rm -rf ~/.cabal/packages/*
 
-RUN curl https://bootstrap.pypa.io/get-pip.py > get-pip.py \
-    && python get-pip.py
+COPY compile.sh /
 
-RUN cabal update && cabal install pandoc-citeproc
-RUN pip install MarkdownPP
-
-RUN apt-get install -y --no-install-recommends biber
-    
-COPY ./compile.sh /
-
-ENTRYPOINT ["/compile.sh"]
+CMD /compile.sh
