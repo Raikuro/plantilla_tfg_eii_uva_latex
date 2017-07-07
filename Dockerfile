@@ -27,4 +27,4 @@ RUN cabal update &&\
 
 COPY compile.sh /
 
-CMD /compile.sh
+CMD sh compile.sh
