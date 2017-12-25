@@ -5,6 +5,7 @@ $header-includes$
 \title{$titulo$}
 
 \begin{document}
+    {\fontfamily{phv}\selectfont
     \begin{titlepage}
         \begin{center}
             \vspace*{-1in}
@@ -13,37 +14,39 @@ $header-includes$
                     \includegraphics[width=3cm]{./latex/img/logo}
                 \end{center}
             \end{figure}
-            \begin{large}
-                \textbf{Universidad de Valladolid}
-            \end{large}
-
-            \vspace*{0.15in}
-            \vspace*{0.6in}
-            \begin{large}
-                \textbf{ESCUELA DE INGENIERÍA INFORMÁTICA}
-            \end{large}
-            \vspace*{0.2in}
-            \textbf{ GRADO EN INGENIERÍA INFORMÁTICA}\\
-            \textbf{ MENCIÓN EN $mencion$ }
-            \vspace*{0.5in}
-            \rule{140mm}{0.1mm}\\
+            \begin{Large}
+                \textbf{ Universidad de Valladolid }\\
+            \end{Large}
+            \vspace*{0.75in}
+            \begin{Huge}
+                { Escuela de Ingeniería Informática }\\
+            \end{Huge}
             \vspace*{0.3in}
-            \begin{large}
-                \textbf{{\LARGE $titulo$\\}}
-            \end{large}
-            \vspace*{0.6in}
-            \rule{140mm}{0.1mm}\\
-            \vspace*{2in}
+            \begin{Large}
+                \textbf{\textsc{Trabajo Fin de Grado}}\\
+            \end{Large}
+            \vspace*{0.5in}
+            \begin{Large}
+                { Grado en Ingeniería Informática}\\
+                { (Mención en $mencion$) }\\
+            \end{Large}
+            \vspace*{1in}
+            \begin{Huge}
+                \textbf{ $titulo$ }
+            \end{Huge}
+            \vspace*{1.6in}
             \begin{large}
                 \begin{flushright}
-                    \textbf{Alumno/a: $autor$ \\
+                    Alumno/a: \\
+                    \textbf{ $autor$ }\\
                     \vspace*{0.3in}
-                    Tutores/as: }
+                    Tutores/as: \\
+                    \textbf{ $tutor$ }
                 \end{flushright}
             \end{large}
         \end{center}
     \end{titlepage}
-
+    }
     \newpage
     \mbox{}	
     \thispagestyle{empty} % para que no se numere esta página
@@ -65,21 +68,16 @@ $header-includes$
     \chapter*{Resumen} % si no queremos que añada la palabra "Capitulo"
     \addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
     \markboth{RESUMEN}{RESUMEN} % encabezado
-    \begin{flushleft}
 
     $resumen$
-
-    \end{flushleft}
 
 
     \chapter*{Abstract} % si no queremos que añada la palabra "Capitulo"
     \addcontentsline{toc}{chapter}{Abstract} % si queremos que aparezca en el índice
     \markboth{ABSTRACT}{ABSTRACT} % encabezado
-    \begin{flushleft}
 
     $abstract$
 
-    \end{flushleft}
 
     \tableofcontents % indice de contenidos
 
